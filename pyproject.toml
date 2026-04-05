@@ -8,12 +8,9 @@ dependencies = [
     "torch>=2.0",
     "numpy",
     "pandas",
-    "scikit-learn",
     "nltk",
     "tqdm",
 ]
 
 [project.scripts]
-nmt-train = "NMT:train"
-nmt-test = "NMT:test"
-nmt-translate = "NMT:translate"
+nmt = "NMT:main"

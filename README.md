@@ -6,8 +6,8 @@ A seq2seq neural machine translation system built with PyTorch, translating Engl
 
 - **Encoder**: Bidirectional LSTM (hidden size 1024, 1 layer)
 - **Decoder**: Unidirectional LSTM with teacher forcing during training
-- **Training**: Adam optimizer (lr=0.0001), CrossEntropyLoss, batch size 64, 40 epochs
-- **Evaluation**: BLEU-1 score via NLTK
+- **Training**: Adam optimizer (lr=0.0001), CrossEntropyLoss, gradient clipping, ReduceLROnPlateau scheduler, batch size 64, 40 epochs
+- **Evaluation**: BLEU-1 and BLEU-4 scores via NLTK
 
 ## Dataset
 
@@ -15,7 +15,7 @@ A seq2seq neural machine translation system built with PyTorch, translating Engl
 
 ## Setup
 
-Requires Python 3.10+ and a CUDA-capable GPU.
+Requires Python 3.10+. A CUDA-capable GPU is recommended but CPU is supported.
 
 ```bash
 uv sync
