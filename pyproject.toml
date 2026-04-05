@@ -1,0 +1,16 @@
+[project]
+name = "neural-machine-translation"
+version = "0.1.0"
+description = "Neural Machine Translation (English to Vietnamese) using PyTorch seq2seq with bidirectional LSTM"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0",
+    "numpy",
+    "pandas",
+    "nltk",
+    "tqdm",
+]
+
+[project.scripts]
+nmt = "NMT:main"
